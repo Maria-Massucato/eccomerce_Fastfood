@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="container-navbar">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="principal.html">
                     <img src="img/logo.png" alt="HashiHub">
                     HashiHub
                 </a>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link btn-nav" href="#"><i class="fas fa-sign-in-alt"></i> Entrar</a>
+                        <a class="nav-link btn-nav" href="entrar.html"><i class="fas fa-sign-in-alt"></i> Entrar</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn-nav" href="#"><i class="fas fa-user-plus"></i> Cadastrar</a>
@@ -35,9 +37,10 @@
                 <div class="hero-row">
                     <div class="hero-col hero-col-text">
                         <h1 class="hero-title fade-in">Bem-vindo ao HashiHub</h1>
-                        <p class="hero-subtitle fade-in">O melhor da culinária japonesa, direto na sua casa. Sabores autênticos, ingredientes frescos e a tradição milenar do Japão.</p>
+                        <p class="hero-subtitle fade-in">O melhor da culinária japonesa, direto na sua casa. Sabores
+                            autênticos, ingredientes frescos e a tradição milenar do Japão.</p>
                         <div class="hero-buttons fade-in">
-                            <a href="#" class="btn btn-primary">
+                            <a href="cardapio.html" class="btn btn-primary">
                                 <i class="fas fa-utensils"></i> Ver Cardápio
                             </a>
                             <!-- <a href="#" class="btn btn-outline-light">
@@ -60,14 +63,45 @@
                     <p class="lead text-muted">Conheça nossos pratos mais populares</p>
                 </div>
                 <div id="produtos-destaque" class="produtos-lista">
-                    <p class="text-muted text-center">Erro ao carregar produtos em destaque</p>
+
+                    <!-- From Uiverse.io by gharsh11032000 -->
+                    <div class="cards-row">
+                        <div class="card">
+                            <img src="img/hot-roll.jpg" alt="Hot Roll Sushi" width="100%">
+                                
+                            <div class="card__content">
+                                <p class="card__title">Hot Roll</p>
+                                <p class="card__description">O nome não nega: o hot roll é uma espécie de sushi empanado e frito após ser enrolado. 
+                                    Com diferentes sabores, ele traz um agridoce agradável e conquista os mais diversos paladares.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="img/temaki.jpg" alt="Temaki Sushi" width="100%">
+                            <div class="card__content">
+                                <p class="card__title">Temaki</p>
+                                <p class="card__description">O cone de algas com gohan e recheios de peixe, frutas, legumes ou shimeji, 
+                                    também está entre os queridinhos dos amantes da culinária japonesa. 
+                                     O temaki é uma opção deliciosa e cheia de sabor.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="img/sushi.jpg" alt="Sushi" width="100%">
+                            <div class="card__content">
+                                <p class="card__title">Sushi</p>
+                                <p class="card__description">O sushi é provavelmente o prato mais famoso do cardápio japonês. 
+                                    Com gohan e uma infinidade de recheios, tradicionais ou veganos, 
+                                    ele agrada a todos os gostos e promete uma explosão de sabor na boca.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="cardapio.html" class="btn btn-outline-primary">
+                            <i class="fas fa-eye"></i> Ver Cardápio Completo
+                        </a>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <a href="/Cardapio" class="btn btn-outline-primary">
-                        <i class="fas fa-eye"></i> Ver Cardápio Completo
-                    </a>
-                </div>
-            </div>
         </section>
 
         <!-- Categorias -->
@@ -75,32 +109,25 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="display-5 fw-bold text-primary">Nossas Especialidades</h2>
-                    <p class="lead text-muted">Explore nossa variedade de pratos japoneses</p>
+                    <p class="lead text-muted">Nossa variedade de pratos japoneses</p>
                 </div>
                 <div class="especialidades-row">
                     <div class="especialidade-card">
                         <i class="fas fa-fish-fins fa-3x text-primary"></i>
                         <h5 class="card-title">Sushi &amp; Sashimi</h5>
-                        <p class="card-text">Peixes frescos e frutos do mar preparados com técnicas tradicionais japonesas.</p>
-                        <a href="/Cardapio?categoria=1" class="btn btn-primary">
-                            <i class="fas fa-arrow-right"></i> Explorar
-                        </a>
+                        <p class="card-text">Peixes frescos e frutos do mar preparados com técnicas tradicionais
+                            japonesas.</p>
                     </div>
                     <div class="especialidade-card">
                         <i class="fas fa-fire fa-3x text-primary"></i>
                         <h5 class="card-title">Hot Rolls</h5>
-                        <p class="card-text">Sushi empanado e frito, uma fusão perfeita entre tradição e inovação.</p>
-                        <a href="/Cardapio?categoria=4" class="btn btn-primary">
-                            <i class="fas fa-arrow-right"></i> Explorar
-                        </a>
+                        <p class="card-text">Sushi empanado e frito, <br>uma fusão perfeita entre <br> tradição e
+                            inovação.</p>
                     </div>
                     <div class="especialidade-card">
                         <i class="fas fa-bowl-food fa-3x text-primary"></i>
                         <h5 class="card-title">Yakisoba</h5>
                         <p class="card-text">Macarrão japonês refogado com legumes frescos e proteínas selecionadas.</p>
-                        <a href="/Cardapio?categoria=5" class="btn btn-primary">
-                            <i class="fas fa-arrow-right"></i> Explorar
-                        </a>
                     </div>
                 </div>
             </div>
@@ -111,8 +138,10 @@
             <div class="container sobre-row">
                 <div class="sobre-col sobre-col-text">
                     <h2 class="display-5 fw-bold text-primary mb-4">Nossa História</h2>
-                    <p class="lead">O HashiHub nasceu da paixão pela autêntica culinária japonesa e do desejo de compartilhar sabores únicos com você.</p>
-                    <p>Com ingredientes frescos e técnicas tradicionais, preparamos cada prato com carinho e dedicação. Nossa missão é levar até sua casa a verdadeira experiência gastronômica japonesa.</p>
+                    <p class="lead">O HashiHub nasceu da paixão pela autêntica culinária japonesa e do desejo de
+                        compartilhar sabores únicos com você.</p>
+                    <p>Com ingredientes frescos e técnicas tradicionais, preparamos cada prato com carinho e dedicação.
+                        Nossa missão é levar até sua casa a verdadeira experiência gastronômica japonesa.</p>
                     <div class="sobre-info-row">
                         <div class="sobre-info">
                             <h3 class="text-primary fw-bold">500+</h3>
@@ -146,17 +175,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Call to Action -->
-        <section class="cta bg-primary text-white">
-            <div class="container text-center">
-                <h2 class="display-6 fw-bold mb-3">Pronto para experimentar?</h2>
-                <p class="lead mb-4">Cadastre-se agora e ganhe 10% de desconto no seu primeiro pedido!</p>
-                <a href="/Auth/Cadastro" class="btn btn-light">
-                    <i class="fas fa-user-plus"></i> Criar Conta Grátis
-                </a>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -185,15 +203,16 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             // Carregar produtos em destaque (AJAX removido, apenas exemplo)
             // Animações
-            document.querySelectorAll('.fade-in').forEach(function(el, idx) {
-                setTimeout(function() {
+            document.querySelectorAll('.fade-in').forEach(function (el, idx) {
+                setTimeout(function () {
                     el.style.opacity = 1;
                 }, idx * 200 + 400);
             });
         });
     </script>
 </body>
+
 </html>
