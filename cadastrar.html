@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastrar - HashiHub</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,600,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+
+  <!-- Navbar (mesma usada na principal) -->
+  <header>
+    <nav class="navbar">
+      <div class="container-navbar">
+        <a class="navbar-brand" href="principal.html">
+          <img src="img/logo.png" alt="HashiHub" style="height:36px; margin-right:8px;">
+          HashiHub
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container-form">
+      <form class="form register-form" id="registerForm" autocomplete="off" novalidate>
+        <div class="form-header">
+          <div class="form-header-icon"><i class="fa fa-user-plus"></i></div>
+          <h2>Criar Conta no HashiHub</h2>
+          <p class="subtitle">Junte-se a nós e desfrute da melhor culinária japonesa</p>
+        </div>
+
+        <label class="label">Nome Completo</label>
+        <div class="inputForm">
+          <i class="fa fa-user input-icon"></i>
+          <input type="text" name="name" class="input" placeholder="Seu nome completo" required>
+        </div>
+
+        <label class="label">Email</label>
+        <div class="inputForm">
+          <i class="fa fa-envelope input-icon"></i>
+          <input type="email" name="email" class="input" placeholder="seu@email.com" required>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label class="label">Senha</label>
+            <div class="inputForm">
+              <i class="fa fa-lock input-icon"></i>
+              <input id="password" type="password" name="password" class="input" placeholder="Sua senha" minlength="6" required>
+              <button type="button" class="btn-eye" id="togglePassword"><i class="fa fa-eye"></i></button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label class="label">Confirmar Senha</label>
+            <div class="inputForm">
+              <i class="fa fa-lock input-icon"></i>
+              <input id="passwordConfirm" type="password" name="passwordConfirm" class="input" placeholder="Repita a senha" minlength="6" required>
+              <button type="button" class="btn-eye" id="togglePasswordConfirm"><i class="fa fa-eye"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <p class="muted"><i class="fa fa-map-marker-alt me-1"></i> Informações de Entrega (Opcional)</p>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-8">
+            <label class="label">Endereço</label>
+            <div class="inputForm">
+              <i class="fa fa-home input-icon"></i>
+              <input type="text" name="endereco" class="input" placeholder="Rua, número, bairro">
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <label class="label">Telefone</label>
+            <div class="inputForm">
+              <i class="fa fa-phone input-icon"></i>
+              <input type="tel" name="telefone" class="input" placeholder="(11) 99999-9999">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-aux mt-2">
+          <label class="remember">
+            <input type="checkbox" name="terms" required> Eu concordo com os <a href="#" class="link">Termos de Uso</a> e <a href="#" class="link">Política de Privacidade</a>
+          </label>
+        </div>
+
+        <button type="submit" class="button-submit mt-3"><i class="fa fa-user-plus me-2"></i> Criar Minha Conta</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer (mesmo da principal) -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="footer-col">
+        <h5><i class="fas fa-utensils"></i> HashiHub</h5>
+        <p>O melhor da culinária japonesa, direto na sua casa. Sabores autênticos e ingredientes frescos.</p>
+      </div>
+      <div class="footer-col">
+        <h5><i class="fas fa-clock"></i> Horário de Funcionamento</h5>
+        <p>Segunda a Domingo<br>18:00 às 23:30</p>
+      </div>
+      <div class="footer-col">
+        <h5><i class="fas fa-phone"></i> Contato</h5>
+        <p>
+          <i class="fas fa-phone"></i> (28) 99999-9999<br>
+          <i class="fas fa-envelope"></i> contato@hashihub.com<br>
+          <i class="fab fa-instagram"></i> @hashihub
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="container text-center">
+      <p>© 2025 HashiHub. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+<script>
+  // alternar visibilidade das senhas
+  document.getElementById('togglePassword').addEventListener('click', function(){
+    const pwd = document.getElementById('password');
+    const icon = this.querySelector('i');
+    pwd.type = pwd.type === 'password' ? 'text' : 'password';
+    icon.classList.toggle('fa-eye-slash');
+    icon.classList.toggle('fa-eye');
+  });
+  document.getElementById('togglePasswordConfirm').addEventListener('click', function(){
+    const pwd = document.getElementById('passwordConfirm');
+    const icon = this.querySelector('i');
+    pwd.type = pwd.type === 'password' ? 'text' : 'password';
+    icon.classList.toggle('fa-eye-slash');
+    icon.classList.toggle('fa-eye');
+  });
+
+  // validação simples e evitar submit real durante testes
+  document.getElementById('registerForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const pw = document.getElementById('password').value;
+    const pc = document.getElementById('passwordConfirm').value;
+    if (pw !== pc) { alert('As senhas não coincidem'); return; }
+    if (!this.checkValidity()) { this.reportValidity(); return; }
+    alert('Cadastro simulado');
+  });
+</script>
+
+</body>
+</html>
