@@ -8,13 +8,17 @@
 
 O **HashiHub** é um e-commerce de comida japonesa desenvolvido como projeto acadêmico/pessoal. A plataforma permite que usuários explorem o cardápio, se cadastrem e façam pedidos de pratos da culinária japonesa com entrega em domicílio.
 
+## 🌐 Deploy
+
+Acesse o projeto online: **[eccomerce-fastfood.vercel.app](https://eccomerce-fastfood.vercel.app/)**
+
 ---
 
 ## 🖥️ Páginas
 
 | Arquivo           | Descrição                                      |
 |-------------------|------------------------------------------------|
-| `index.html`  | Página inicial com hero, produtos em destaque e sobre nós |
+| `principal.html`  | Página inicial com hero, produtos em destaque e sobre nós |
 | `cardapio.html`   | Cardápio completo com todos os pratos          |
 | `entrar.html`     | Página de login                                |
 | `cadastrar.html`  | Página de cadastro de novo usuário             |
@@ -32,7 +36,7 @@ eccomerce_Fastfood/
 │   ├── hot-roll.jpg
 │   ├── temaki.jpg
 │   └── sushi.jpg
-├── index.html
+├── principal.html
 ├── cardapio.html
 ├── entrar.html
 └── cadastrar.html
