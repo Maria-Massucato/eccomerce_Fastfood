@@ -14,7 +14,7 @@ O **HashiHub** é um e-commerce de comida japonesa desenvolvido como projeto aca
 
 | Arquivo           | Descrição                                      |
 |-------------------|------------------------------------------------|
-| `principal.html`  | Página inicial com hero, produtos em destaque e sobre nós |
+| `index.html`  | Página inicial com hero, produtos em destaque e sobre nós |
 | `cardapio.html`   | Cardápio completo com todos os pratos          |
 | `entrar.html`     | Página de login                                |
 | `cadastrar.html`  | Página de cadastro de novo usuário             |
@@ -32,7 +32,7 @@ eccomerce_Fastfood/
 │   ├── hot-roll.jpg
 │   ├── temaki.jpg
 │   └── sushi.jpg
-├── principal.html
+├── index.html
 ├── cardapio.html
 ├── entrar.html
 └── cadastrar.html
